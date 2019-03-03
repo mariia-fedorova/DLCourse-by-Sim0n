@@ -54,7 +54,7 @@ class KNN:
         dists = np.zeros((num_test, num_train), np.float32)
         for i_test in range(num_test):
             for i_train in range(num_train):
-                # TODO: Fill dists[i_test][i_train]
+                dists[i_test][i_train] += abs(i_train - i_test)
                 pass
 
     def compute_distances_one_loop(self, X):
